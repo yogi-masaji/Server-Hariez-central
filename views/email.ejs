@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mail</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <style>
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            .headings {
+                background-color: grey;
+            }
+
+            .dualButtons {
+                text-align: center;
+            }
+
+            .btn-success {
+                box-shadow: 2px 3px 4px 0px #276873;
+                background-color: #599bb3;
+                border-radius: 37px;
+                display: inline-block;
+                cursor: pointer;
+                color: #ffffff;
+                font-family: Arial;
+                font-size: 17px;
+                padding: 12px 31px;
+                text-decoration: none;
+            }
+            .btn-success:hover {
+                background-color: #408c99;
+            }
+
+            .btn-danger {
+                background-color: #ff0000;
+                border-color: #ff0000;
+            }
+
+            /* Added Styles */
+            body {
+                background-color: #e7e4e4;
+                margin: 0;
+                padding: 20px;
+            }
+
+            .container {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .card {
+                border-radius: 8px;
+                background-color: #dfcdcd;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="card">
+                <h1>Hi <%= user.nama %></h1>
+                <p>
+                    Kode perbaikan anda <b><%= kodePerbaikan %></b> , silahkan
+                    cek link dibawah ini untuk melihat progress perbaikan
+                </p>
+
+                <a
+                    href="http://localhost:3002/perbaikan/status/<%= id %>"
+                    class="btn btn-success"
+                    >Cek Status Perbaikan</a
+                >
+            </div>
+        </div>
+    </body>
+</html>
